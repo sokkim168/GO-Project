@@ -82,12 +82,13 @@ To create a new room, send a POST request to `/rooms` with the following JSON bo
   "Floor": 1,
   "Status": "Available"
 }
-
+```
 To create a new room booking, send a POST request to `/room-bookings` with the following JSON body:
+```json
 {
-    "RoomID": 2,
+    "RoomID": 1,
     "BookingDate": "2024-06-17 12:10:50",
-    "StartDate": "2024-06-17 20:10:51",
-    "EndDate": "2024-06-17 05:10:52",
+    "StartDate": "2024-06-18 20:10:51",
+    "EndDate": "2024-06-20 05:10:52",
     "Status": "VIP"
 }
