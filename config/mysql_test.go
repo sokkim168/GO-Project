@@ -20,7 +20,6 @@ func TestConnectMySql(t *testing.T) {
 	host := os.Getenv("HOST")
 	port := os.Getenv("PORT")
 	db, err := ConnectMySql(user, pass, host, port, dbname)
-	// fmt.Printf("user:%v, pass:%v, host:%v, port:%v, db:%v", user, pass, host, port, dbname)
 	// db, err := ConnectMySql("root", "MYSQL@root2024", "localhost", "3309", "room_booking")
 	if err != nil {
 		log.Fatalf("Could not connect to MySQL: %v", err)

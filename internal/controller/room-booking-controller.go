@@ -7,10 +7,15 @@ import (
 
 	"example.com/booking/models"
 	"github.com/gorilla/mux"
+	"gorm.io/gorm"
 )
 
 type RoomBooking struct {
 	Model *models.RoomBooking
+}
+
+type RoomBookingController struct {
+	DB *gorm.DB
 }
 
 func (c *RoomBooking) Index(w http.ResponseWriter, r *http.Request) {

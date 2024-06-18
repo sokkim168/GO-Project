@@ -26,25 +26,25 @@ func init() {
 }
 
 func (r *RoomBooking) Create() *RoomBooking {
-	db.Create(&r)
+	db.Preload("Room").Create(&r)
 	return r
 }
 
 func (r *RoomBooking) All() []RoomBooking {
 	var RB []RoomBooking
-	db.Find(&RB)
+	db.Preload("Room").Find(&RB)
 	return RB
 }
 
 func (r *RoomBooking) Find(id int32) *RoomBooking {
 	var Get RoomBooking
-	db.Where("ID=?", id).Find(&Get)
+	db.Preload("Room").Where("ID=?", id).Find(&Get)
 	return &Get
 }
 
 func (r *RoomBooking) Update(id int32) *RoomBooking {
 	var Get RoomBooking
-	db.Where("ID=?", id).Updates(r).Find(&Get)
+	db.Preload("Room").Where("ID=?", id).Updates(r).Find(&Get)
 	return &Get
 }
 
