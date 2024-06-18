@@ -75,11 +75,19 @@ Here are the available API endpoints:
 ### Example Request
 
 To create a new room, send a POST request to `/rooms` with the following JSON body:
-
 ```json
 {
   "RoomNumber": "101",
   "RoomSize": "Large",
   "Floor": 1,
   "Status": "Available"
+}
+
+To create a new room booking, send a POST request to `/room-bookings` with the following JSON body:
+{
+    "RoomID": 2,
+    "BookingDate": "2024-06-17 12:10:50",
+    "StartDate": "2024-06-17 20:10:51",
+    "EndDate": "2024-06-17 05:10:52",
+    "Status": "VIP"
 }
