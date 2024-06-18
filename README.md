@@ -32,7 +32,7 @@ To get started with this project, follow the instructions below.
 
 4. **Run migrations**:
 
-    This is simple, you just routing localhost:8080/rooms or localhost:8080/room-booking with get method then it will auto create a database name room_booking if doesn't exsit and then will migrations all those table 
+    This is simple, you just routing localhost:8080/api/rooms or localhost:8080/api/room-booking with get method then it will auto create a database name room_booking if doesn't exsit and then will migrations all those table 
 
 ### Running the Project
 
@@ -59,22 +59,22 @@ To build and run the project, use the following commands:
 Here are the available API endpoints:
 
 - **Rooms**:
-  - `GET /rooms` - Get all rooms
-  - `GET /rooms/{id:[0-9]+}` - Get a room by ID
-  - `POST /rooms` - Create a new room
-  - `PUT /rooms/{id:[0-9]+}` - Update a room by ID
-  - `DELETE /rooms/{id:[0-9]+}` - Delete a room by ID
+  - `GET /api/rooms` - Get all rooms
+  - `GET /api/rooms/{id:[0-9]+}` - Get a room by ID
+  - `POST /api/rooms` - Create a new room
+  - `PUT /api/rooms/{id:[0-9]+}` - Update a room by ID
+  - `DELETE /api/rooms/{id:[0-9]+}` - Delete a room by ID
 
 - **Room Bookings**:
-  - `GET /room_bookings` - Get all room bookings
-  - `GET /room_bookings/{id:[0-9]+}` - Get a room booking by ID
-  - `POST /room_bookings` - Create a new room booking
-  - `PUT /room_bookings/{id:[0-9]+}` - Update a room booking by ID
-  - `DELETE /room_bookings/{id:[0-9]+}` - Delete a room booking by ID
+  - `GET /api/room_bookings` - Get all room bookings
+  - `GET /api/room_bookings/{id:[0-9]+}` - Get a room booking by ID
+  - `POST /api/room_bookings` - Create a new room booking
+  - `PUT /api/room_bookings/{id:[0-9]+}` - Update a room booking by ID
+  - `DELETE /api/room_bookings/{id:[0-9]+}` - Delete a room booking by ID
 
 ### Example Request
 
-To create a new room, send a POST request to `/rooms` with the following JSON body:
+To create a new room, send a POST request to `/api/rooms` with the following JSON body:
 ```json
 {
   "RoomNumber": "101",
@@ -83,7 +83,7 @@ To create a new room, send a POST request to `/rooms` with the following JSON bo
   "Status": "Available"
 }
 ```
-To create a new room booking, send a POST request to `/room-bookings` with the following JSON body:
+To create a new room booking, send a POST request to `/api/room-bookings` with the following JSON body:
 ```json
 {
     "RoomID": 1,
